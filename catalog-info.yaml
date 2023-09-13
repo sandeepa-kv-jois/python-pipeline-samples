@@ -20,6 +20,7 @@ metadata:
     harness.io/services: |
       CD: https://stress.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/home/orgs/testGroupCreateSahiba/projects/test2FA/services/testservice?tab=summaryTab
     grafana/dashboard-selector: "(tags @> 'prometheus' || tags @> 'blackbox')"
+    pagerduty.com/service-id: PT5ED69
 
 #     snyk.io/org-name: vigneswara-propelo
 #     snyk.io/project-ids: 7c7766e6-1231-4e4f-b51f-0cbd2aacb227
