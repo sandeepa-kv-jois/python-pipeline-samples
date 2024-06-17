@@ -1,18 +1,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: python-pipeline-samples-prod
+  name: gitlab-scorecard-datasource1
+  description: newDescription
   annotations:
     backstage.io/techdocs-ref: dir:.
-    backstage.io/kubernetes-label-selector: 'app=idp-ui'
-    backstage.io/kubernetes-namespace: '64805447033849710a35ad34'
-    github.com/project-slug: vigneswara-propelo/python-pipeline-samples
-
-#     snyk.io/org-name: vigneswara-propelo
-#     snyk.io/project-ids: 7c7766e6-1231-4e4f-b51f-0cbd2aacb227, 4addb946-2ff4-41b7-ae71-2a5d480193ee
+    harness.io/pipelines: |
+      labelA: https://qa.harness.io/ng/account/Vp0XSI5MSgiF9p8lIIpThg/home/orgs/default/projects/automation/pipelines/quickstart/pipeline-studio/?storeType=INLINE
+    harness.io/services: |
+      labelA: https://qa.harness.io/ng/account/Vp0XSI5MSgiF9p8lIIpThg/home/orgs/default/projects/automation/services/nginx?tab=summaryTab
 spec:
   type: service
+  owner: idpadmin
   lifecycle: experimental
-  owner: harness_account_all_users
-  providesApis: 
-    - idp-Service-api
