@@ -1,1 +1,32 @@
-test
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: python-pipeline-samples-3
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+#     harness.io/project-url: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/home/orgs/default/projects/vigneshproject/details
+#     circleci.com/project-slug: github/vigneswara-propelo/python-pipeline-samples
+    gitlab.com/project-id: '43877214'
+    jira/project-key: IDP
+    jenkins.io/github-folder: 'CDS-68313'
+    firehydrant.com/service-name: 'python-pipeline-samples'
+    backstage.io/kubernetes-label-selector: 'app=idp-ui'
+    backstage.io/kubernetes-namespace: '63feee14cbf66e3c798c4bdc'
+    github.com/project-slug: vigneswara-propelo/python-pipeline-samples
+    harness.io/pipelines: |
+      Build: https://idp-eu1-cluster.harness.io/ng/account/MzUzMzUyMWUtYWU4Yy00Mz/module/ci/orgs/prateekorg/projects/prateekproject/pipelines/buildpipeline/executions/?storeType=INLINE
+      Lint: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/home/orgs/default/projects/IDP_UI/pipelines/Lint/pipeline-studio
+      TypeCheck: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/home/orgs/default/projects/IDP_UI/pipelines/Typecheck/pipeline-studio
+    harness.io/services: |
+      CD: https://qa.harness.io/ng/account/zEaak-FLS425IEO7OLzMUg/home/orgs/default/projects/idptestproject/services/idp?tab=summaryTab
+    grafana/dashboard-selector: "(tags @> 'prometheus' || tags @> 'blackbox')"
+    pagerduty.com/service-id: PT5ED69
+
+#     snyk.io/org-name: vigneswara-propelo
+#     snyk.io/project-ids: 7c7766e6-1231-4e4f-b51f-0cbd2aacb227
+spec:
+  type: service
+  lifecycle: experimental
+  owner: harness_account_all_users
+  providesApis: 
+    - idp-Service-api
